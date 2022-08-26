@@ -1,0 +1,128 @@
+.header{
+  position: sticky;
+  // top: 0px;
+  // left: 0px;
+  // right: 0px;
+  z-index: 10;
+  padding: 25px 150px;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &__container{
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  &__logo img{
+  max-width: 170px;
+  max-height: 90px;
+  border-radius: 50%;
+  }
+  &__menu{
+    position: relative;
+  }
+  &__nav{
+  margin: 0px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  .active{
+    color: #b0193c;
+    border-bottom: 1px solid #b0193c;
+  }
+  li{
+    margin: 0px 50px 0px 0px;
+  }
+  &:last-child{
+    margin-right: 0px;
+  }
+  a{
+    text-decoration: none;
+    color: #252121;
+    font-weight: 300;
+    font-size: 18px;
+    /* mouse over link */
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: #b0193c;
+      
+    }
+  }
+  }
+  &__btn{
+      background: #b0193c;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      padding: 12px 24px;
+      text-transform: uppercase;
+      border-radius: 60px;
+      border: none;
+      outline: none;
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 14px;
+      -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+      transition: all .3s ease-in-out;
+      &:hover{
+        background: #f12353;
+        
+      }
+  }
+  .ccc{
+    position: absolute;
+  bottom: 2px;
+  width: 0;
+  background-color: red;
+  display: block;
+  height: 2px;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  }
+}
+
+.header.animate {
+  padding: 15px 150px;
+  background-color: #fff;
+}
+@media (max-width: 1600px){
+  .container {
+    max-width: 1130px;
+    padding: 0px 30px;
+  }
+  .header {
+    padding: 20px 60px;
+    &__menu ul li{
+      margin-right: 45px;
+      a{
+        font-size: 15px;
+      }
+    }
+    &__logo img{
+    max-width: 145px;
+    max-height: 80px;
+    }
+  }
+  .header.animate {
+    padding: 10px 60px;
+  }
+
+}
+@media (max-width: 1040px) {
+  .header {
+    display: none;
+  }
+}
